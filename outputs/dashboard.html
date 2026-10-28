@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather Data Analysis Dashboard</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 1100px; margin: 30px auto; padding: 0 18px; color: #202938; }
+header { padding: 22px; border-radius: 12px; background: #eef4ff; }
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 20px 0; }
+.metric { padding: 16px; border: 1px solid #d8deea; border-radius: 10px; }
+.metric span { display: block; font-size: 13px; margin-bottom: 8px; color: #536174; }
+.metric strong { font-size: 22px; }
+section { margin: 26px 0; }
+img { width: 100%; max-width: 850px; height: auto; border: 1px solid #e0e4eb; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { padding: 10px; border-bottom: 1px solid #e2e6ed; text-align: left; }
+th { background: #f3f5f8; }
+.note { color: #596579; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+<h1>Weather Data Analysis Dashboard</h1>
+<p>Month 1 Data Science Project — Skybrisk Intern Certification</p>
+<p class="note">Demonstration dataset only; values are illustrative and are not live weather readings.</p>
+</header>
+<div class="metrics"><div class="metric"><span>Observations after cleaning</span><strong>25</strong></div><div class="metric"><span>Cities covered</span><strong>5</strong></div><div class="metric"><span>Mean temperature</span><strong>24.79 °C</strong></div><div class="metric"><span>Minimum temperature</span><strong>16.8 °C</strong></div><div class="metric"><span>Maximum temperature</span><strong>31.4 °C</strong></div></div>
+<section><h2>City-level summary</h2><table class="dataframe summary">
+  <thead>
+    <tr style="text-align: right;">
+      <th>city</th>
+      <th>average_temperature_c</th>
+      <th>average_humidity_pct</th>
+      <th>total_rainfall_mm</th>
+      <th>observations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mumbai</td>
+      <td>29.44</td>
+      <td>79.0</td>
+      <td>13.2</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Jaipur</td>
+      <td>27.80</td>
+      <td>39.8</td>
+      <td>0.0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Bengaluru</td>
+      <td>25.06</td>
+      <td>65.2</td>
+      <td>0.6</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Delhi</td>
+      <td>21.54</td>
+      <td>57.4</td>
+      <td>1.7</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Chandigarh</td>
+      <td>20.12</td>
+      <td>63.5</td>
+      <td>2.7</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h2>Temperature Histogram</h2><img src="temperature_histogram.png" alt="temperature histogram chart"></section><section><h2>Temperature Vs Humidity</h2><img src="temperature_vs_humidity.png" alt="temperature vs humidity chart"></section><section><h2>Correlation Heatmap</h2><img src="correlation_heatmap.png" alt="correlation heatmap chart"></section>
+</body>
+</html>
